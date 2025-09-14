@@ -17,13 +17,13 @@ public class minimum_falling_path {
 	}
 	
 	public static int mimimun_falling_path(int[][] matrix, int cr, int cc, int[][] dp) {
-		if (cr == matrix.length-1) {
-			return matrix[cr][cc];
-		}
 		if (cc < 0 || cc >= matrix[0].length) {
 			return Integer.MAX_VALUE;
 		}
-		if(dp[cr][cc] != -1) {
+		if (cr == matrix.length-1) {
+			return matrix[cr][cc];
+		}
+		if(dp[cr][cc] != -66666) {
 			return dp[cr][cc];
 		} 
 		int d = mimimun_falling_path(matrix, cr+1, cc, dp);
